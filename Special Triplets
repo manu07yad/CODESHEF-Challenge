@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int t,n,count;
+    cin>>t;
+    for(int i=0;i<t;i++)
+    {
+    cin>>n;
+    count=0;
+    for(int C=1;C<=n/2;C++)
+    {
+        for(int B=C;B<=n;B+=C)
+         if(B%C==0)
+         {
+             for(int A=C; A<=n;A+=B)
+             {
+                 if(A%B==C)
+                 {
+                     count++;
+                 }
+             }
+         }
+      
+    }
+    cout<<count<<endl;
+  }   
+}
