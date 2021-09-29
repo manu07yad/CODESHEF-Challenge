@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+int main() 
+{
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int X,Y,Z;
+	    cin>>X>>Y>>Z;
+	    int sum=X;
+	    for(int i=1;i<=Z;i++)
+	    {
+	        sum+=2;
+	    }
+	    if(sum>=Y)
+	    {
+	        cout<<"YES"<<endl;
+	    }
+	    else
+	    {
+	        cout<<"NO"<<endl;
+	    }
+}
+	return 0;
+}
