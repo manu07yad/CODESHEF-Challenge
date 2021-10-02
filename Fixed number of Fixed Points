@@ -1,0 +1,49 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+void fixedpoint()
+{
+    int n,k;
+	    cin>>n>>k;
+	    int c=k;
+	    c++;
+	    if(k==n-1)
+	    {
+	        cout<<"-1"<<endl;
+	        return;
+	    }
+	    int i;
+	   for( i=1;i<=n;i++)
+	   {
+	       if(k==0)
+	       break;
+	       cout<<i<<" ";
+	       k--;
+	   }
+	   vector<int>arr;
+	   for(int j=n;j>=i;j--)
+	   {
+	       if(j==c)
+	       {
+	           arr.push_back(j);
+	           continue;
+	       }
+	       cout<<j<<" ";
+	       c++;
+	   }
+      for(auto val:arr)
+	   cout<<val<<" ";
+	   
+	   cout<<endl;
+	   return;
+}
+
+int main() {
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    fixedpoint();
+	}
+	return 0;
+}
